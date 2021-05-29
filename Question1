@@ -1,0 +1,11 @@
+//program to print even number of array.
+
+
+void main() {
+  var a=[10,215,54,56,85,12,43,465,7,44,76,33];
+  for (int i=0;i<11;i++) {
+    if(a[i]%2==0){
+      print(a[i]);
+    }
+  }
+}
