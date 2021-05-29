@@ -1,0 +1,23 @@
+
+import java.net.URLEncoder;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+class HelloWorld {
+    public static void main(String[] args) {
+       String host = "http://my-json-server.typicode.com/typicode/demo/pics";
+      String charset = "UTF-8";
+      String api_host = "my-json-server.typicode.com/typicode/demo/pics";
+      String x_rapidapi_key = <123456789123456>;
+      String s = "Pulp";
+      String query = String.format("s=%s",
+       URLEncoder.encode(s, charset)); 
+       HttpResponse <JsonNode> response = Unirest.get(host + "?" + query)
+      .header("x-rapidapi-host", x_rapidapi_host)
+      .header("x-rapidapi-key", x_rapidapi_key)
+      .asJson();
+    System.out.println(response.getStatus());
+      System.out.println(response.getHeaders().get("Content-Type"));
+    }
+    
+}
