@@ -1,0 +1,25 @@
+  class Objects{
+    int id;
+    String name;
+    Objects(this.id,this.name);
+    @override
+  String toString() {
+    return 'Objects: {id: ${id},name: ${name}}';
+  }
+}
+
+void main() {
+
+  List obj=[
+    Objects(10,'abc'),
+    Objects(6,'raam'),
+    Objects(5,'abc4'),
+    Objects(4,'idgaf'),
+  ];
+  print("before sorting");
+  print(obj);
+  obj.sort((a, b) => a.id.compareTo(b.id));
+  print("after sorting");
+  print(obj.toString());
+
+}
