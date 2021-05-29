@@ -1,0 +1,24 @@
+void main(){
+  var a=[0,0,1,0,1,1,0,1,0,0,0,1,1,1,1,0];
+  var count=[];
+  int flag=0;
+  for(int i=0; i<15; i++){
+    if(a[i]==1){
+      if(a[i+1]==1){
+        flag++;
+      }
+      else{
+        flag++;
+        count.add(flag);
+        flag=0;
+      }
+    }
+  }
+  int largest_int=count[0];
+  for(int i=0; i<count.length;i++){
+    if(count[i]>largest_int){
+      largest_int=count[i];
+    }
+  }
+  print(largest_int);
+}
